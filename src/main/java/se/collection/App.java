@@ -85,15 +85,15 @@ public class App
         originalList.add("C");
         originalList.add("a");
 
-        // original & transferase
-        ArrayList<String> transferaseToOriginalList = originalList;
+        // original & reference
+        ArrayList<String> referenceToOriginalList = originalList;
         System.out.println("OriginalList: " + originalList);
         System.out.println("OriginalList Size: " + originalList.size());
-        System.out.println("ReferenceList: " + transferaseToOriginalList);
-        System.out.println("ReferenceList Size: " + transferaseToOriginalList.size());
+        System.out.println("ReferenceList: " + referenceToOriginalList);
+        System.out.println("ReferenceList Size: " + referenceToOriginalList.size());
         System.out.println("Remove from originalList index 1: " + originalList.remove(1));
         System.out.println("OriginalList Size: " + originalList.size());
-        System.out.println("ReferenceList Size: " + transferaseToOriginalList.size());
+        System.out.println("ReferenceList Size: " + referenceToOriginalList.size());
 
         // clone
         ArrayList<String> cloneList = (ArrayList<String>) originalList.clone();
