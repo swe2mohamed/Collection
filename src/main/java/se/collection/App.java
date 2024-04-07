@@ -1,8 +1,6 @@
 package se.collection;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Hello world!
@@ -12,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ex4();
+        ex6();
     }
 
     public static void ex1() {
@@ -100,9 +98,66 @@ public class App
         originalList.remove(0);
         System.out.println(originalList);
         System.out.println(cloneList);
+    }
 
+    public static void ex5 (){
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(2);
+        numbers.add(4);
+        numbers.add(3);
+        numbers.add(2);
+
+        // Sort Integer
+        numbers.sort(Comparator.naturalOrder());
+        System.out.println(numbers);
+        numbers.sort(Comparator.reverseOrder());
+        System.out.println(numbers);
+
+
+        ArrayList<String> letters = new ArrayList<>();
+        letters.add("D");
+        letters.add("B");
+        letters.add("A");
+        letters.add("C");
+        letters.add("a");
+
+        // Sort String
+        letters.sort(Comparator.naturalOrder());
+        System.out.println(letters);
+        // * Collections.sort(letters,String.CASE_INSENSITIVE_ORDER);
+        letters.sort(String.CASE_INSENSITIVE_ORDER);
+        System.out.println(letters);
+        letters.sort(Comparator.reverseOrder());
+        System.out.println(letters);
+    }
+    public static void ex6(){
+        String test1 = "TEST";
+        String test2 = "TEST";
+
+        // hashCode
+        boolean isComparedTwoStrings = test1.equals(test2);
+        System.out.println("isComparedTwoStrings: " + isComparedTwoStrings);
+        System.out.println(test1.hashCode());
+        System.out.println(test2.hashCode());
+
+        //
+        ArrayList<Person> people = new ArrayList<>();
+        Person person1 = new Person(3,"John","Doe", "john@test.se");
+        Person person2 = new Person(1, "Alice", "Smith", "alice@test.se");
+        Person person3 = new Person(2, "Bob", "Johnson", "bob@test.se");
+
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+
+        System.out.println(people.size());
+        for (Person person : people){
+            System.out.println(person);
+        }
 
 
 
     }
+
 }
